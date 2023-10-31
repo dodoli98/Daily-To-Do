@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <!-- css -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+       <script>
+        const inputElement = document.getElementById("todoInput");
+        const todoList = document.getElementById("todolist");
+
+        inputElement.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" && inputElement.value.trim() !== "") {
+                const newTodo = document.createElement("li");
+                newTodo.textContent = inputElement.value;
+                todoList.appendChild(newTodo);
+                inputElement.value = ""; // Clear the input field
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    
+    
+    <div id="todo_wrapper">
+        <header id="todolist_header">
+            <h1>Daily To-Do</h1>
+        </header>
+
+        <form id="input_form">
+            <input type="text" id="todoInput" placeholder="Write to do!">
+        </form>
+        
+        <ul id="todolist">
+
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
