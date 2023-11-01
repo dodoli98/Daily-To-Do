@@ -5,43 +5,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>todolist</title>
+    <title>Daily To-Do</title>
+
     <!-- css -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-       <script>
-        const inputElement = document.getElementById("todoInput");
-        const todoList = document.getElementById("todolist");
 
-        inputElement.addEventListener("keydown", function (event) {
-            if (event.key === "Enter" && inputElement.value.trim() !== "") {
-                const newTodo = document.createElement("li");
-                newTodo.textContent = inputElement.value;
-                todoList.appendChild(newTodo);
-                inputElement.value = ""; // Clear the input field
-            }
-        });
-    </script>
+
 </head>
 
 <body>
 
-    
-    
     <div id="todo_wrapper">
         <header id="todolist_header">
             <h1>Daily To-Do</h1>
         </header>
 
         <form id="input_form">
-            <input type="text" id="todoInput" placeholder="Write to do!">
+            <input type="text" id="todoinput" placeholder="Write Daily to do!">
         </form>
-        
-        <ul id="todolist">
 
+        <ul id="todo_list">
+            <li class="list_item">
+                <span>Lorem ipsum dolor sit</span>
+                <button>X</button>
+            </li>
+            <li class="list_item">
+                <span>Lorem ipsum dolor sit</span>
+                <button>X</button>
+            </li>
+            <li class="list_item">
+                <span>Lorem ipsum dolor sit</span>
+                <button>X</button>
+            </li>
+            <li class="list_item">
+                <span>Lorem ipsum dolor sit</span>
+                <button>X</button>
+            </li>
+            <li class="list_item">
+                <span>Lorem ipsum dolor sit</span>
+                <button>X</button>
+            </li>
         </ul>
 
     </div>
+
+    <script>
+
+        // input 요소
+        const inputElement = document.getElementById("todoinput");
+
+        // 리스트 
+        const todoList = document.getElementById("todolist");
+
+        // 추가된 할일
+        const result = document.getElementById("result");
+
+        console.log(inputElement);
+        console.log(todoList);
+
+        inputElement.addEventListener("keydown", function (event) {
+
+            // enter 이벤트 시
+            // if (event.key === "Enter" && inputElement.value.trim() !== "") {
+            if (window.event.keyCode == 13) {
+                // 새로운 li 요소 생성
+                let newTodo = document.createElement("li");
+                newTodo.innerHTML = inputElement.value;
+                console.log("new Todo = ", innerHTML);
+
+                // 새로 생성된 li 요소를 리스트에 추가
+                todoList.appendChild(newTodo);
+
+                inputElement.value = "";
+            }
+        });
+
+    </script>
 
 </body>
 

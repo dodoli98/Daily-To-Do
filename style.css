@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'father';
+    src: url(font/father.ttf);
+}
+
+@font-face {
+    font-family: 'diligence';
+    src: url(font/diligence.ttf);
+}
+
 body {
     width: 100%;
     height: 100vh;
@@ -5,23 +15,56 @@ body {
     position: relative;
 }
 
- #todo_wrapper {
+#todo_wrapper {
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: block;
 }
 
+/* -------------header-------------- */
 #todolist_header {
     text-align: center;
-    font-size: 4em;
+    font-size: 6.5em;
     font-weight: 900;
     margin-bottom: 0.5em;
+
 }
 
-#input_form > input{
+#todolist_header>h1 {
+    font-family: 'father';
+}
+
+
+/* -------------input-------------- */
+
+#input_form>input {
     padding: 0.4em 0;
     width: 100%;
     outline: none;
     border-bottom: 1px solid black;
+    font-family: 'diligence';
+}
+
+/* -------------list------------- */
+
+#todo_list {
+    font-family: 'diligence';
+    font-size: 1.2em;
+
+    margin-top: 1em;
+    width: 100%;
+    list-style: none;
+    padding: 1em 0;
+
+}
+.list_item {
+    padding: 0.7em 0;
+
+}
+
+
+.list_item>button {
+    float: right;
 }
