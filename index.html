@@ -11,77 +11,38 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 
-
+    <!-- JS -->
+    <script src="check.js"></script>
 </head>
 
+<!-- 
+    추가할 기능
+    1. 입력시간을 배열에 추가후 delete시 소요시간을 표시
+    2. delete시 모달로그를 띄워서 완료 카운트에 추가할지  
+ -->
+ 
 <body>
-
+    
     <div id="todo_wrapper">
         <header id="todolist_header">
             <h1>Daily To-Do</h1>
         </header>
 
         <form id="input_form">
-            <input type="text" id="todoinput" placeholder="Write Daily to do!">
+            <input type="text" id="input" placeholder="Write Daily to do!">
         </form>
 
         <ul id="todo_list">
             <li class="list_item">
-                <span>Lorem ipsum dolor sit</span>
-                <button>X</button>
-            </li>
-            <li class="list_item">
-                <span>Lorem ipsum dolor sit</span>
-                <button>X</button>
-            </li>
-            <li class="list_item">
-                <span>Lorem ipsum dolor sit</span>
-                <button>X</button>
-            </li>
-            <li class="list_item">
-                <span>Lorem ipsum dolor sit</span>
-                <button>X</button>
-            </li>
-            <li class="list_item">
-                <span>Lorem ipsum dolor sit</span>
+                <input type="checkbox" id="checkbox">
+                <span></span>
                 <button>X</button>
             </li>
         </ul>
-
     </div>
 
-    <script>
+    <script src="main.js"></script>
 
-        // input 요소
-        const inputElement = document.getElementById("todoinput");
-
-        // 리스트 
-        const todoList = document.getElementById("todolist");
-
-        // 추가된 할일
-        const result = document.getElementById("result");
-
-        console.log(inputElement);
-        console.log(todoList);
-
-        inputElement.addEventListener("keydown", function (event) {
-
-            // enter 이벤트 시
-            // if (event.key === "Enter" && inputElement.value.trim() !== "") {
-            if (window.event.keyCode == 13) {
-                // 새로운 li 요소 생성
-                let newTodo = document.createElement("li");
-                newTodo.innerHTML = inputElement.value;
-                console.log("new Todo = ", innerHTML);
-
-                // 새로 생성된 li 요소를 리스트에 추가
-                todoList.appendChild(newTodo);
-
-                inputElement.value = "";
-            }
-        });
-
-    </script>
 
 </body>
 
