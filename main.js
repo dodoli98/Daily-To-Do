@@ -32,7 +32,6 @@ addTask.addEventListener('keydown', function (event) {
    - 해결방법 
    if(event.isComposing) return; 
    isComposing이 참인 순간은 아직 IME에 의한 composition 단계이므로, 이 단계에서 이벤트가 발생하지 않도록 return 해준다.
-   방법을 사용할 수 있다.
    
    */
     if (event.isComposing) return;
