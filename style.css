@@ -64,15 +64,23 @@ body {
 /* -------------list------------- */
 
 
-.list_item {
+#todo_list > li {
     padding: 0 1em 1.5em 1em;
 }
 
-.list_item > input {
+#todo_list > li > input {
     margin-right: 1em;
 }
 
 
-.list_item > button {
+#todo_list > li > button {
     float: right;
+}
+
+
+/* -------------check box------------- */
+
+#todo_list li.complete {
+    text-decoration: line-through;
+    color: rgb(155, 155, 155);
 }

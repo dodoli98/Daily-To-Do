@@ -12,14 +12,9 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- JS -->
-    <script src="check.js"></script>
+    <!-- <script src="check.js"></script> -->
 </head>
 
-<!-- 
-    추가할 기능
-    1. 입력시간을 배열에 추가후 delete시 소요시간을 표시
-    2. delete시 모달로그를 띄워서 완료 카운트에 추가할지  
- -->
  
 <body>
     
@@ -29,7 +24,8 @@
         </header>
 
         <form id="input_form">
-            <input type="text" id="input" placeholder="Write Daily to do!">
+            <!-- autofocus를 이용해서 자동으로 input요소에 커서가 켜짐 -->
+            <input type="text" id="input" placeholder="Write Daily to do!" autofocus autocomplete="off">
         </form>
 
         <ul id="todo_list">
