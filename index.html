@@ -10,6 +10,10 @@
     <!-- css -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="window.js"></script>
+
+    <!-- <script src="background.js"></script> -->
+
 
     <!-- JS -->
     <!-- <script src="check.js"></script> -->
@@ -23,21 +27,14 @@
             <h1>Daily To-Do</h1>
         </header>
 
-        <form id="input_form">
-            <!-- autofocus를 이용해서 자동으로 input요소에 커서가 켜짐 -->
-            <input type="text" id="input" placeholder="Write Daily to do!" autofocus autocomplete="off">
-        </form>
+        <!-- autofocus를 이용해서 자동으로 input요소에 커서가 켜짐 -->
+        <input type="text" id="input" placeholder="Write Daily to do!" autofocus autocomplete="off"  name="dailyToDo">
 
-        <ul id="todo_list">
-            <li class="list_item">
-                <input type="checkbox" id="checkbox">
-                <span></span>
-                <button>X</button>
-            </li>
-        </ul>
+        <ul id="todo_list"></ul>
     </div>
 
-    <script src="main.js"></script>
+
+
 
 
 </body>

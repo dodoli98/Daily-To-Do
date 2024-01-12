@@ -25,7 +25,7 @@ body {
 /* -------------header-------------- */
 #todolist_header {
     text-align: center;
-    font-size: 6.5em;
+    font-size: 5.5em;
     font-weight: 900;
 
 }
@@ -36,12 +36,14 @@ body {
 
 
 /* -------------input-------------- */
-#input_form > input {
+ #input {
     padding: 1em 0;
     width: 100%;
     outline: none;
     border-bottom: 1px solid black;
     font-family: 'diligence';
+
+    background-color: transparent;
 }
 
 /* -------------ul------------- */
@@ -80,7 +82,7 @@ body {
 
 /* -------------check box------------- */
 
-#todo_list li.complete {
+#todo_list > li.complete {
     text-decoration: line-through;
     color: rgb(155, 155, 155);
 }
